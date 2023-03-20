@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <button>Click</button>
+    </div>
+
+    <img src="https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg" alt="">
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        // https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg
+
+        let isFirstImg = true;
+
+        // 甚麼時候、誰、做甚麼事?
+        $('button').click(function () {
+
+            // 作法1
+            if (isFirstImg) {
+                $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg')
+            }
+            else {
+                $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg')
+            }
+
+            // 作法2
+            const imgSrc = (isFirstImg) ? '01/08/18/45/road-7705909_1280.jpg' : '03/15/03/46/jeep-7853620_1280.jpg';
+
+            $('img').attr('src', `https://cdn.pixabay.com/photo/2023/${imgSrc}`)
+
+
+            // 反轉我們的布林值
+            isFirstImg = !isFirstImg
+        })
+
+
+    </script>
+</body>
+
+</html>

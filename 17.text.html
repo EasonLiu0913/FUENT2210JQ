@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text html</title>
+    <style>
+        span {
+            color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="getText">getText</button>
+    <button id="getHtml">getHtml</button>
+    <button id="getHtmlText">getHtmlText</button>
+
+
+    <h1 id="sample">Hello <span>World</span></h1>
+    <h1 id="result"></h1>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $('#getText').click(function () {
+            console.log('getText');
+
+            // 拿 #sample 的 TEXT
+            const h1Text = $('#sample').text()
+            console.log('h1Text', h1Text);
+
+            // 改 result 的 TEXT
+            $('#result').text(h1Text)
+
+        })
+        $('#getHtml').click(function () {
+            console.log('getHtml');
+
+            // 拿 #sample 的 HTML
+            const h1Html = $('#sample').html()
+            console.log('h1Html', h1Html);
+
+            // 改 result 的 HTML
+            $('#result').html(h1Html)
+        })
+
+        $('#getHtmlText').click(function () {
+            console.log('getHtmlText');
+
+            // 拿 #sample 的 HTML
+            const h1Html = $('#sample').html()
+            console.log('h1Html', h1Html);
+
+            // 改 result 的 TEXT
+            $('#result').text(h1Html)
+
+
+        })
+    </script>
+
+
+</body>
+
+</html>
