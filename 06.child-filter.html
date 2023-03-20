@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <div class="row">
-            <p>p1</p>
+            <!-- <p>p1</p> -->
             <div class="col">col1</div>
             <div class="col">col2</div>
             <div class="col">col3</div>
@@ -27,13 +27,14 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
     <script>
-        $('.col:first-of-child').css('background', 'red')
-        // $('.col:first-of-type').css('background', 'red')
-        // $('.col:nth-child(2)').css('background', 'blue')
-        // $('.col:nth-of-type(2)').css('background', 'red')
+        $('.row > :first-child').css('background', 'red')
+                // $('.col:first-child').css('background', 'red')
+                // $('.col:first-of-type').css('background', 'red')
+                // $('.col:nth-child(2)').css('background', 'blue')
+                // $('.col:nth-of-type(2)').css('background', 'red')
 
-        // $('p:only-child').css('background', 'red')
-        // $('p:only-of-type').css('background', 'red')
+                // $('p:only-child').css('background', 'red')
+                // $('p:only-of-type').css('background', 'red')
     </script>
 </body>
 
