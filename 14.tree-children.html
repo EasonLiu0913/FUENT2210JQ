@@ -28,6 +28,20 @@
         <li class="item-3">item-3</li>
     </ul>
 
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        // $('.level-1').find('ul').css('border', '1px solid red')
+
+        // $('.item-001').parent().closest('li').css('border', '1px solid red')
+        // $('.item-001').parents().css('border', '1px solid red')
+        // $('.item-001').next().next().next().css('border', '1px solid red')
+        // $('.item-003').prev().prev().css('border', '1px solid red')
+
+        $('.item-001').closest('.item-2').prev().css('border', '1px solid red')
+
+    </script>
 </body>
 
 </html>
