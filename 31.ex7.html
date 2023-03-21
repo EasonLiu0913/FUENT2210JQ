@@ -39,7 +39,7 @@
         let districtArray = [
             ['七堵', '中正', '暖暖'],
             ['中正', '大安', '信義'],
-            ['蘆洲', '三重', '新店'],
+            ['蘆洲', '三重', '新店', '中和'],
         ];
 
         // 使用者修改 #CITY 的時候，我想自動帶入 districtArray 裡的區域資料
@@ -52,7 +52,43 @@
 
             console.log('districData', districData);
 
+
             // TODO:拿出區域資料，去修改右邊的選項
+
+            // 資料1
+            // console.log('資料1', districData[0]);
+            // 主詞1
+            // console.log('主詞1', $('#district option').eq(0));
+
+            // $('#district option').eq(0).text(districData[0] + '區')
+
+
+            // 資料2
+            // console.log('資料2', districData[1]);
+            // 主詞2
+            // console.log('主詞2', $('#district option').eq(1));
+
+            // $('#district option').eq(1).text(districData[1] + '區')
+
+            // 資料3
+            // console.log('資料3', districData[2]);
+            // 主詞3
+            // console.log('主詞3', $('#district option').eq(2));
+
+            // $('#district option').eq(2).text(districData[2] + '區')
+
+            $('#district').empty()
+
+            for (let i = 0; i < districData.length; i++) {
+                // $('#district option').eq(i).text(districData[i] + '區')
+
+                $('#district').append(`<option value="${i}">${districData[i]}區</option>`)
+
+                // 資料3
+                console.log('資料', i, districData[i]);
+                // 主詞3
+                console.log('主詞', i, $('#district option').eq(i));
+            }
 
         })
 
