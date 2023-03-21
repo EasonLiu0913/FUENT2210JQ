@@ -20,7 +20,7 @@
             width: 500%;
             left: 0px;
             transition: 0.5s;
-            transform: translateX(0px);
+            transform: translateX(-0px);
         }
 
         li img {
@@ -41,7 +41,7 @@
             border: 1px solid #fff;
         }
 
-        .slider-dots li:first-child {
+        .slider-dots li:nth-child(1) {
             background: #fff;
         }
 
@@ -117,12 +117,13 @@
         integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script>
 
-        let liIndex = 0;
+        let nowPage = 0;
+        // let liIndex = 0;
 
         $('.slider-dots li').mouseenter(function (event) {
             console.log('mouseenter', event.target);
             console.log('index', $(event.target).index());
-            liIndex = $(event.target).index();
+            nowPage = $(event.target).index();
             moveX()
         })
 
@@ -133,11 +134,23 @@
 
         function moveX() {
             const sliderWindowWidth = $('.slider-window').width()
-            const movementX = -1 * sliderWindowWidth * liIndex;
+            const movementX = -1 * sliderWindowWidth * nowPage;
             $('.img-wrap').css('transform', `translateX(${movementX}px)`)
 
-            $('.slider-dots li').eq(liIndex).css('background', '#fff').siblings().css('background', 'transparent')
+            $('.slider-dots li').eq(nowPage).css('background', '#fff').siblings().css('background', 'transparent')
         }
+
+        $('.nextPageArea').click(function () {
+            if (nowPage === 4) return;
+            nowPage++;
+            moveX()
+        })
+
+        $('.prevPageArea').click(function () {
+            if (nowPage === 0) return;
+            nowPage--;
+            moveX()
+        })
 
 
     </script>
