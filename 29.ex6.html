@@ -12,12 +12,13 @@
         .slider-window {
             max-width: 800px;
             height: 400px;
+            /* aspect-ratio: 2/1; */
             overflow: hidden;
-            position: relative;
         }
 
         .img-wrap {
             width: 500%;
+            /* height: 100%; */
             left: 0px;
             transition: 0.5s;
             transform: translateX(-0px);
@@ -31,7 +32,7 @@
         }
 
         .slider-dots {
-            bottom: 0;
+            top: 380px;
         }
 
         .slider-dots li {
@@ -129,6 +130,10 @@
 
         $(window).resize(function () {
             console.log('window resize');
+
+            // const imgWrapHeight = $('.img-wrap').height()
+            // $('.slider-dots').css('top', `${imgWrapHeight - 120}px`)
+
             moveX()
         })
 

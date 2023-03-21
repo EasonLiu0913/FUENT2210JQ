@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text">
+
+        <button type="submit">submit</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $('form').submit(function (event) {
+            event.preventDefault();
+            console.log('form submit');
+        })
+
+        $('input').focus(function () {
+            console.log('input focus');
+        })
+        $('input').blur(function () {
+            console.log('input blur');
+        })
+
+        $('input').change(function () {
+            console.log('input change');
+        })
+
+        $('input').on('input', function (event) {
+            console.log('input input');
+            console.log('input.val()', $(event.target).val());
+        })
+    </script>
+</body>
+
+</html>
