@@ -13,7 +13,7 @@
         <button>Click</button>
     </div>
 
-    <img src="https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg" alt="">
+    <img src="https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg" alt="myImg">
 
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
@@ -23,21 +23,52 @@
 
         let isFirstImg = true;
 
+        const srcData = [
+            {
+                src: 'https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg',
+                alt: 'jeep'
+            },
+            {
+                src: 'https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg',
+                alt: 'road'
+            }
+        ]
+
         // 甚麼時候、誰、做甚麼事?
         $('button').click(function () {
 
+            // 作法3
+            $('img').attr(srcData[+isFirstImg])
+
             // 作法1
             if (isFirstImg) {
-                $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg')
+                // $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg')
+
+                $('img').attr({})
+
+                $('img').attr({
+                    src: 'https://cdn.pixabay.com/photo/2023/01/08/18/45/road-7705909_1280.jpg',
+                    alt: 'road'
+                })
             }
             else {
-                $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg')
+                // $('img').attr('src', 'https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg')
+
+                $('img').attr({
+                    src: 'https://cdn.pixabay.com/photo/2023/03/15/03/46/jeep-7853620_1280.jpg',
+                    alt: 'jeep'
+                })
             }
 
             // 作法2
-            const imgSrc = (isFirstImg) ? '01/08/18/45/road-7705909_1280.jpg' : '03/15/03/46/jeep-7853620_1280.jpg';
+            // const imgSrc = (isFirstImg) ? '01/08/18/45/road-7705909_1280.jpg' : '03/15/03/46/jeep-7853620_1280.jpg';
 
-            $('img').attr('src', `https://cdn.pixabay.com/photo/2023/${imgSrc}`)
+            // $('img').attr('src', `https://cdn.pixabay.com/photo/2023/${imgSrc}`)
+
+            // console.log('isFirstImg:', isFirstImg);
+            // console.log('imgSrc:', imgSrc);
+
+            // console.log('img html alt=', $('img').attr('alt'));
 
 
             // 反轉我們的布林值

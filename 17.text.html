@@ -31,12 +31,13 @@
 
             // 拿 #sample 的 TEXT
             const h1Text = $('#sample').text()
-            console.log('h1Text', h1Text);
+            console.log('getText', h1Text);
 
             // 改 result 的 TEXT
             $('#result').text(h1Text)
 
         })
+
         $('#getHtml').click(function () {
             console.log('getHtml');
 
@@ -46,6 +47,10 @@
 
             // 改 result 的 HTML
             $('#result').html(h1Html)
+
+            // JS
+            const result = document.querySelector('#result')
+            result.innerHTML = h1Html
         })
 
         $('#getHtmlText').click(function () {
@@ -58,7 +63,9 @@
             // 改 result 的 TEXT
             $('#result').text(h1Html)
 
-
+            // JS
+            const result = document.querySelector('#result')
+            result.innerText = h1Html;
         })
     </script>
 
