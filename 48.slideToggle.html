@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Click</button>
+
+    <div>
+        title 1
+    </div>
+    <div class="slide1">
+        <h1>Slide1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quod hic voluptas recusandae neque tempora
+            explicabo quis, cum minima unde nostrum cupiditate earum, sed, eligendi eum. Ea consequuntur odio ut.</p>
+    </div>
+    <div>
+        title 2
+    </div>
+    <div class="slide2">
+        <h1>Slide1</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsa quod hic voluptas recusandae neque tempora
+            explicabo quis, cum minima unde nostrum cupiditate earum, sed, eligendi eum. Ea consequuntur odio ut.</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $('button').click(function () {
+            $('.slide1').slideToggle(1000)
+        })
+    </script>
+</body>
+
+</html>

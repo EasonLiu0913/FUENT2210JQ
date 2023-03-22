@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>postion</title>
+    <style>
+        .wrap {
+            margin: 200px;
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: #ccc;
+        }
+
+        .box {
+            position: absolute;
+            top: 15px;
+            left: 53px;
+            width: 200px;
+            height: 200px;
+            background-color: #faf;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        console.log($('.box').position());
+    </script>
+</body>
+
+</html>

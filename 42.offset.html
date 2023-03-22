@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>offset</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        section {
+            height: 1000px;
+            font-size: 3rem;
+            border: 1px solid #000;
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #faf;
+            margin-left: 200px;
+            transition: 1s;
+            transform: translateY(0px);
+        }
+
+        .box.hide {
+            opacity: 0;
+            transform: translateY(200px);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        section1
+    </section>
+    <section>
+        section2
+    </section>
+    <section>
+        <div class="box">box</div>
+    </section>
+    <section>
+        section4
+    </section>
+    <section>
+        section5
+    </section>
+    <section>
+        section6
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        console.log('offset:', $('.box').offset());
+        console.log('offset().top:', $('.box').offset().top);
+
+        $('.box').offset({
+            top: '50', //數值為字串
+            left: '100',
+        })
+
+
+        $(window).scroll(function () {
+            const scrollTop = $(window).scrollTop();
+            const boxOffsetTop = $('.box').offset().top;
+
+            if (scrollTop >= (boxOffsetTop - $(window).height() * .75)) {
+                $('.box').removeClass('hide')
+            }
+            else {
+                $('.box').addClass('hide')
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>
