@@ -60,10 +60,8 @@
 
         $('.color-select-area').on('click', '.color-select', function () {
             console.log($(event.target).css('background-color'));
-
-            const bgColor = $(event.target).css('background-color')
-
-            $('.color-demo-area').css('background-color', bgColor)
+            const bgColor = $(event.target).css('background-image')
+            $('.color-demo-area').css('background-image', bgColor)
         })
 
     </script>
