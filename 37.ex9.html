@@ -107,7 +107,7 @@
                 cssLeft = (nextLeft + boxWidth < wrapperWidth) ? `${nextLeft}px` : `${maxLeft}px`
             }
             else {
-                cssLeft = (nextLeft - boxWidth >= 0) ? `${nextLeft}px` : `${minLeft}px`
+                cssLeft = (nextLeft > 0) ? `${nextLeft}px` : `${minLeft}px`
             }
 
             $('.box').css('left', cssLeft)
