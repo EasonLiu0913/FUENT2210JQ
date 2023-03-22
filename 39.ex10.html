@@ -28,9 +28,9 @@
         <!-- toggle button -->
         <div class="py-2 d-flex justify-content-end">
             <div class="btn-group">
-                <button class="btn  btn-info ">S</button>
-                <button class="btn  btn-info active">M</button>
-                <button class="btn  btn-info ">L</button>
+                <button class="btn btn-info ">S</button>
+                <button class="btn btn-info active">M</button>
+                <button class="btn btn-info ">L</button>
             </div>
         </div>
 
@@ -72,6 +72,20 @@
         // })
 
         $('.btn').click(function () {
+
+            // 方法三:
+            $(event.target).addClass('active').siblings().removeClass('active')
+
+            const btnText = $(event.target).text();
+            console.log('btnText', btnText);
+
+            const siblingsText = $(event.target).siblings().text()
+            console.log('siblingsText', typeof siblingsText);
+            console.log('siblingsText', siblingsText[0]);
+            console.log('siblingsText', siblingsText[1]);
+
+            $('p').addClass(`font${btnText}`).removeClass(`font${siblingsText[0]} font${siblingsText[1]}`)
+
 
             // 方法一:
 
