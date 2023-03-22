@@ -12,6 +12,7 @@
     <button id="sayHi">sayHi</button>
     <button id="on">on</button>
     <button id="off">off</button>
+    <button id="login">登入按鈕</button>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
@@ -30,6 +31,10 @@
         $('#off').click(function () {
             console.log('off');
             $('#sayHi').off('click', sayHi)
+        })
+
+        $('#login').one('click', function () {
+            console.log('登入中...請稍等...');
         })
     </script>
 </body>

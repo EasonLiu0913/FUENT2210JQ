@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">box</div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        let style = {
+            color: "#fff",
+            background: "#000",
+        };
+
+
+
+        $('.box').css('width', '100px')
+
+        $('.box').click(function () {
+
+            $('.box').css('width', '+=50')
+
+
+            // $('.box').css(style)
+
+
+            // console.log('width', $('.box').css('width'));
+            // console.log('typeof', typeof $('.box').css('width'));
+
+            // if (parseInt($('.box').css('width')) > 90) {
+            //     console.log('yes');
+            // }
+            // else {
+            //     console.log('no');
+            // }
+
+
+            // console.log($('.box').css('background-color'));
+            // if ($('.box').css('background-color') === 'rgb(255, 192, 203)') {
+            //     $('.box').css('background', 'red')
+            // }
+            // else {
+            //     $('.box').css('background', 'blue')
+            // }
+        })
+    </script>
+</body>
+
+</html>
