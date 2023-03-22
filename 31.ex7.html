@@ -56,9 +56,9 @@
             // TODO:拿出區域資料，去修改右邊的選項
 
             // 資料1
-            // console.log('資料1', districData[0]);
+            console.log('資料1', districData[0]);
             // 主詞1
-            // console.log('主詞1', $('#district option').eq(0));
+            console.log('主詞1', $('#district option').eq(0));
 
             // $('#district option').eq(0).text(districData[0] + '區')
 
@@ -77,12 +77,14 @@
 
             // $('#district option').eq(2).text(districData[2] + '區')
 
-            $('#district').empty()
+            const district = $('#district');
+
+            district.empty()
 
             for (let i = 0; i < districData.length; i++) {
                 // $('#district option').eq(i).text(districData[i] + '區')
 
-                $('#district').append(`<option value="${i}">${districData[i]}區</option>`)
+                district.append(`<option value="${i}">${districData[i]}區</option>`)
 
                 // 資料3
                 console.log('資料', i, districData[i]);

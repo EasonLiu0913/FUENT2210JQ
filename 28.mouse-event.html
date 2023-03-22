@@ -28,6 +28,21 @@
         // $('.box').dblclick(function () {
         //     console.log('dblclick');
         // })
+
+        $('.box').on({
+            click: function () {
+                console.log('click');
+            },
+            dblclick: function () {
+                console.log('dblclick');
+            }
+        })
+
+        $(".box").on("contextmenu mouseenter mouseleave", function () {
+            //do something
+            console.log('hello');
+        });
+
         // $('.box').contextmenu(function () {
         //     console.log('contextmenu');
         // })
